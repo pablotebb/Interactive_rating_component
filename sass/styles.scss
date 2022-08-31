@@ -1,3 +1,131 @@
 @use "variables";
 @use "initial";
 @use "footer";
+
+.main-container {
+  // border: 1px solid red;
+  width: variables.$Width-mobile;
+  height: variables.$Height-mobile;
+  margin: 154px auto 60px;
+  @media (min-width: 1300px) {
+    // border: 1px solid red;
+    width: variables.$Width-desktop;
+    height: variables.$Height-desktop;
+  }
+}
+
+.rating {
+  // border: 1px solid yellow;
+  display: none;
+  background-color: variables.$Dark-Blue;
+  border-radius: 16px;
+  padding: 25px;
+  text-align: left;
+  &__logo {
+    display: block;
+    // border: 1px solid blue;
+    padding: 17px;
+    width: 52px;
+    height: 52px;
+    background-color: variables.$Medium-Grey-2;
+    border-radius: 50%;
+    margin-bottom: 17px;
+    // display: grid;
+    // place-content: center;
+  }
+  &__title {
+    color: variables.$White;
+    font-size: 1.5em;
+    margin-bottom: 17px;
+  }
+  &__description {
+    color: variables.$Light-Grey;
+    font-size: 0.87em;
+    line-height: 22px;
+    margin-bottom: 25px;
+  }
+  &__grade {
+    display: flex;
+    gap: 17px;
+    margin-bottom: 17px;
+    &--icon {
+      @extend .rating__logo;
+      color: variables.$Light-Grey;
+      border: none;
+      &:hover {
+        cursor: pointer;
+        background-color: variables.$Medium-Grey;
+        color: variables.$White;
+      }
+      &:focus {
+        cursor: pointer;
+        background-color: variables.$Orange;
+        color: variables.$White;
+      }
+    }
+  }
+  &__button {
+    width: 278px;
+    height: 46px;
+    border-radius: 18px;
+    border: none;
+    background-color: variables.$Orange;
+    color: variables.$White;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    font-weight: 500;
+    letter-spacing: 2px;
+    &:hover {
+      cursor: pointer;
+      background-color: variables.$White;
+      color: variables.$Orange;
+    }
+  }
+
+  @media (min-width: 1300px) {
+    &__description {
+      font-size: 1em;
+    }
+    &__button {
+      width: 97%;
+    }
+  }
+}
+
+.thank {
+  // display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: variables.$Dark-Blue;
+  border-radius: 16px;
+  padding: 40px;
+  &__img {
+    padding-bottom: 18px;
+  }
+  &__selection {
+    // border: 1px solid yellow;
+    @extend .rating__grade--icon;
+    width: 168px;
+    height: 35px;
+    text-align: center;
+    color: variables.$Orange;
+    border-radius: 16px;
+    font-size: 1em;
+    padding: 10px 0;
+  }
+  &__title {
+    @extend .rating__title;
+  }
+  &__description {
+    @extend .rating__description;
+    font-size: 0.7em;
+    text-align: center;
+  }
+
+  @media (min-width: 1300px) {
+    &__description {
+      font-size: 0.93em;
+    }
+  }
+}
