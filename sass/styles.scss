@@ -5,12 +5,10 @@
 .main-container {
   // border: 1px solid red;
   width: variables.$Width-mobile;
-  height: variables.$Height-mobile;
-  margin: 9.625rem auto 3.75rem;
+  margin: 7.5rem auto 3.75rem;
   @media (min-width: 81.25rem) {
     // border: 1px solid red;
     width: variables.$Width-desktop;
-    height: variables.$Height-desktop;
   }
 }
 
@@ -34,8 +32,9 @@
     // place-content: center;
   }
   &__title {
+    // border: 1px solid;
     color: variables.$White;
-    font-size: 1.5em;
+    font-size: 1.8em;
     margin-bottom: 1.0625rem;
   }
   &__description {
@@ -72,7 +71,7 @@
     background-color: variables.$Orange;
     color: variables.$White;
     text-transform: uppercase;
-    font-size: 1.1em;
+    font-size: 0.9em;
     font-weight: 500;
     letter-spacing: 0.125rem;
     &:hover {
@@ -83,6 +82,7 @@
   }
 
   @media (min-width: 81.25rem) {
+    height: 25.625rem;
     &__description {
       font-size: 1em;
     }

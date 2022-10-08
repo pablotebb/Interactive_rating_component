@@ -21,13 +21,11 @@ body {
 
 .main-container {
   width: 20.5rem;
-  height: 25rem;
-  margin: 9.625rem auto 3.75rem;
+  margin: 7.5rem auto 3.75rem;
 }
 @media (min-width: 81.25rem) {
   .main-container {
     width: 25.8125rem;
-    height: 25.8125rem;
   }
 }
 
@@ -49,7 +47,7 @@ body {
 }
 .rating__title, .thank__title {
   color: hsl(0deg, 0%, 100%);
-  font-size: 1.5em;
+  font-size: 1.8em;
   margin-bottom: 1.0625rem;
 }
 .rating__description, .thank__description {
@@ -85,7 +83,7 @@ body {
   background-color: hsl(25deg, 97%, 53%);
   color: hsl(0deg, 0%, 100%);
   text-transform: uppercase;
-  font-size: 1.1em;
+  font-size: 0.9em;
   font-weight: 500;
   letter-spacing: 0.125rem;
 }
@@ -95,6 +93,9 @@ body {
   color: hsl(25deg, 97%, 53%);
 }
 @media (min-width: 81.25rem) {
+  .rating {
+    height: 25.625rem;
+  }
   .rating__description, .thank__description {
     font-size: 1em;
   }
